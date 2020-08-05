@@ -11,13 +11,11 @@
 \documentclass[output=book,
                collection,
                collectionchapter,
-               arseneau,
-               nonflat,
                colorlinks, 
                citecolor=brown,
                multiauthors,
             % ,draft,draftmode
-		  ]{langsci/langscibook}                                 
+		  ]{./langscibook}                                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % put all additional commands you need in the 
@@ -46,11 +44,7 @@
 \include{chapters/preface}
 \include{chapters/acknowledgments}
 
-% %% Additional prefaces and/or introductions that also have authors
-\lsCollectionPaperFrontmatterMode % Enter the Frontmatter Mode. 
 \includepaper{chapters/prefaceEd} 
-\lsCollectionPaperMainmatterMode % Leave the Frontmatter Mode 
-\setcounter{chapter}{0} % Reset the chapter counter so that preceding prefaces are not counted
 
 \mainmatter
 
