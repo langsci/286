@@ -7,14 +7,15 @@
 % Everything following a % is ignored
 % Some lines start with %. Remove the % to include them
 
-\PassOptionsToPackage{italian,french,main=english}{babel}
+\PassOptionsToPackage{greek,italian,french,main=english}{babel}
 \documentclass[output=book,
                collection,
                collectionchapter,
                colorlinks, 
                citecolor=brown,
                multiauthors,
-            % ,draft,draftmode
+            % ,draft,
+            draftmode
 		  ]{./langscibook}                                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -27,6 +28,8 @@
 \input{localhyphenation.tex}
 \input{localcommands.tex} 
 \addbibresource{localbibliography.bib}
+
+\includeonly{chapters/05}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%             Frontmatter                      %%%
