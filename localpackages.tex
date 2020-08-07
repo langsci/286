@@ -14,6 +14,11 @@
 \usepackage[linguistics]{forest}
 \usepackage{subcaption}
 
+\makeatletter
+\let\pgfmathModX=\pgfmathMod@
+\usepackage{pgfplots,pgfplotstable}%
+\let\pgfmathMod@=\pgfmathModX
+\makeatother
 
 \newfontfamily\cjkfont
   [Scale=MatchLowercase]{SourceHanSerifSC-Regular.otf}
