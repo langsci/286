@@ -61,7 +61,7 @@ The technology-driven rise of extensive \is{corpora}corpora of language usage ha
 …that fluent and idiomatic control of a language rests to a considerable extent on knowledge of a body of ``sentence stems'' which are ``institutionalized'' or ``lexicalized''… [and] whose grammatical form and lexical content is wholly or largely fixed; its fixed elements form a standard label for a culturally recognized concept… The stock of lexicalized sentence stems known to the ordinary mature speaker of English amounts to hundreds of thousands.  
 \end{quote}
 
-Referring to the pioneering corpus linguist John Sinclair’s (1933--2007)\footnote{Sinclair’s efforts, dating back to the 1960s, to track statistically relationships between lexical units and meaning in spoken English prefigured corpus linguistics in the big-data sense in which it is now understood (Cf. \citealt{chapelle_encyclopedia_2013-1}).} ``idiom principle'' – that a large number of prefabricated or semi-preconstructed phrases are available to speakers – other researchers have suggested that fully half of fluent native text is constructed according to this principle (\citealt[29]{erman_idiom_2000}). The methodology of corpus linguistics brings statistical precision to the task of identifying co-occurrences that happen with a greater-than-chance frequency.  The distribution of these co-occurrences across time can also be tracked, which at once gives some indication of the ``life span'', so to speak, of specific expressions. Notable corpora for English include, for example, the American National Corpus, the Collins Corpus, Bank of English, the Oxford Hector Pilot Corpus, and the British National Corpus. For ease of use, the Google Books Ngram Viewer is hard to beat as a means of getting a quick snapshot of an expression’s usage data over time.  Even so, its potential limitations may yet render it less reliable than others. These limitations include: 
+Referring to the pioneering corpus linguist John Sinclair’s (1933--2007)\footnote{Sinclair’s efforts, dating back to the 1960s, to track statistically relationships between lexical units and meaning in spoken English prefigured corpus linguistics in the big-data sense in which it is now understood (Cf. \citealt{chapelle_encyclopedia_2013-1}).} ``idiom principle'' – that a large number of prefabricated or semi-preconstructed phrases are available to speakers – other researchers have suggested that fully half of fluent native text is constructed according to this principle (\citealt[29]{erman_idiom_2000}). The methodology of corpus linguistics brings statistical precision to the task of identifying co-occurrences that happen with a greater-than-chance frequency.  The distribution of these co-occurrences across time can also be tracked, which at once gives some indication of the ``life span'', so to speak, of specific expressions. Notable corpora for English include, for example, the American National Corpus, the Collins Corpus, Bank of English, the Oxford Hector Pilot Corpus, and the British National Corpus. For ease of use, the Google Books $n$-gram viewer is hard to beat as a means of getting a quick snapshot of an expression’s usage data over time.  Even so, its potential limitations may yet render it less reliable than others. These limitations include: 
 
 \begin{enumerate}
 \item Phrases are limited to five words, but, on the plus side, they can be searched in most languages in which books are printed. It is also difficult to track accurately collocations that have both a literal and figurative distribution (e.g., \textit{over his head} in \textit{The ball flew over his head} vs. \textit{The lecture went over his head}); 
@@ -77,28 +77,37 @@ While \REF{ex:6:1} is matter of fact, \REF{ex:6:2} is marked by a colloquial cas
 \item the data on usage of fixed expressions that are frequently cited in research literature (e.g., \textit{spill the beans}, \textit{skating on thin ice}, \textit{kick the bucket}) may accordingly be skewed. Thus an expression that might otherwise be considered dated might rise in the frequency ratings just by dint of having been recently studied.
 \end{enumerate}
 
-Despite its limitations, the Google Books Ngram Viewer still, I think, gives an overall sense of usage patterns and frequencies associated with fixed expressions. Looking at a few fixed-expression Ngram charts (see Figures 1--3) can offer a glimpse of insights that could be buttressed or rendered more accurate using other available corpora. 
+Despite its limitations, the Google Books $n$-gram viewer still, I think, gives an overall sense of usage patterns and frequencies associated with fixed expressions. Looking at a few fixed-expression $n$-gram charts (see Figures~\ref{fig:6:1}--\ref{fig:6:3}) can offer a glimpse of insights that could be buttressed or rendered more accurate using other available corpora. 
 
 \begin{figure}
 \pgfplotstableread{data/allofasudden.csv}{\table}
-\pgfplotstablegetcolsof{\table}
-\pgfmathtruncatemacro\numberofcols{\pgfplotsretval-1}
 % %     \includegraphics[width=\textwidth]{./img/09-fig1-2.pdf}
 \begin{tikzpicture}
     \begin{axis}
-    []
+      [
+        axis lines*=left,
+        smooth,
+        height = .3\textheight,
+        width  = \textwidth,
+        x tick label style={/pgf/number format/1000 sep=},
+        scaled ticks=false,
+        xlabel = {year},
+        xmin = 1800,
+        xmax = 2000
+      ]
+    \addplot [mark=none] table [x index=0, y index=3] {\table};
     \end{axis}
-    \caption{Ngram of \textit{all of a sudden}} %%\url{https://books.google.com/ngrams/graph?content=all+of+a+sudden & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Call%20of%20a%20sudden%3B%2Cc0}}
-    \label{fig:6:1}
+\end{tikzpicture}
+    \caption{$n$-gram of \textit{all of a sudden}\label{fig:6:1}} %%\url{https://books.google.com/ngrams/graph?content=all+of+a+sudden & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Call%20of%20a%20sudden%3B%2Cc0}}
 \end{figure}
 
 \begin{figure}
-\caption{Ngram of \textit{kick the bucket}} %%\url{https://books.google.com/ngrams/graph?content=kick+the+bucket & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Ckick%20the%20bucket%3B%2Cc0}
+\caption{$n$-gram of \textit{kick the bucket}\label{fig:6:2}} %%\url{https://books.google.com/ngrams/graph?content=kick+the+bucket & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Ckick%20the%20bucket%3B%2Cc0}
 \label{fig:6:2}
 \end{figure}
 
 \begin{figure}
-\caption{Ngram of \textit{in a jiffy}} %%\url{https://books.google.com/ngrams/graph?content=in+a+jiffy & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Cin%20a%20jiffy%3B%2Cc0}}
+\caption{$n$-gram of \textit{in a jiffy}\label{fig:6:3}} %%\url{https://books.google.com/ngrams/graph?content=in+a+jiffy & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Cin%20a%20jiffy%3B%2Cc0}}
 \label{fig:6:3}
 \end{figure}
 
