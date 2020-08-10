@@ -1,19 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%     Language Science Press Master File       %%%
-%%%              edited volumes                  %%%
-%%%         follow the instructions below        %%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-% Everything following a % is ignored
-% Some lines start with %. Remove the % to include them
-
 \PassOptionsToPackage{greek,italian,french,main=english}{babel}
-\documentclass[output=book,
-               collection,
-               collectionchapter,
-               colorlinks, 
-               citecolor=brown,
-               multiauthors,
+\documentclass[output=book, collection, collectionchapter,multiauthors,
+               colorlinks,                citecolor=brown,
             % ,draft,
             draftmode
 		  ]{./langscibook}                                 
@@ -29,7 +16,7 @@
 \input{localcommands.tex} 
 \addbibresource{localbibliography.bib}
 
-\includeonly{chapters/05}
+% \includeonly{chapters/05}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%             Frontmatter                      %%%
@@ -45,7 +32,7 @@
 
 %% sections without authors
 \include{chapters/preface}
-\include{chapters/acknowledgments}
+% \include{chapters/acknowledgments}
 
 \includepaper{chapters/introduction} 
 
@@ -55,22 +42,21 @@
 %%%             Chapters                         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\includepaper{chapters/01} %add a percentage sign in front of the line to exclude this chapter from book
-\includepaper{chapters/02} 
-\includepaper{chapters/03} 
-\includepaper{chapters/04}
-\includepaper{chapters/05} 
-\includepaper{chapters/06} 
-\includepaper{chapters/07} 
-\includepaper{chapters/08} 
-\includepaper{chapters/09} 
-\includepaper{chapters/10} 
-\includepaper{chapters/11} 
-\includepaper{chapters/12} 
+% \includepaper{chapters/01}  %F
+% \includepaper{chapters/02}  %F
+% \includepaper{chapters/03}  %F
+% \includepaper{chapters/04}  %F
+% \includepaper{chapters/05}  %F
+% \includepaper{chapters/06}  %F
+% \includepaper{chapters/07}  %F
+\includepaper{chapters/08}
+% \includepaper{chapters/09}
+% \includepaper{chapters/10}
+% \includepaper{chapters/11}
+% \includepaper{chapters/12}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%             Backmatter                       %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% There is normally no need to change the backmatter section
 \input{backmatter.tex}
 \end{document} 

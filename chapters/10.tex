@@ -1,4 +1,4 @@
-\documentclass[output=paper]{langsci/langscibook} 
+\documentclass[output=paper]{../langscibook}
 \usepackage{tabularx}
 \author{Gabriel Bergounioux\affiliation{Université d’Orléans/LLL – UMR 7270}\orcid{}} 
 %\ORCIDs{}
@@ -7,6 +7,16 @@
 
 
 \abstract{La \textit{Revue des Patois Gallo-Romans}, apparue cinq ans après les lois Jules Ferry, a été confrontée aux questions que pose la description de l’oral dans un pays de culture écrite. Le choix d’un système de transcription, la définition des qualités attendues de l’enquêteur ou le mode de recrutement des locuteurs ont donné lieu à des interprétations variées. L’étude de l’ensemble des contributeurs permet d’observer, dans le contexte scientifique et social de l’époque, la façon dont les dialectologues ont concilié les conceptions qui sous-tendaient le programme de francisation scolaire et la réévaluation du statut des dialectes qu’a réalisée le comparatisme.}
+
+
+\IfFileExists{../localcommands.tex}{
+  \addbibresource{../localbibliography.bib}
+  \input{../localpackages}
+  \input{../localcommands}
+  \input{../localhyphenation}
+  \togglepaper[10]%%chapternumber
+}{}
+
 
 \begin{document}
 \begin{otherlanguage}{french}
