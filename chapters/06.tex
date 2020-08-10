@@ -81,17 +81,21 @@ Despite its limitations, the Google Books $n$-gram viewer still, I think, gives 
 
 \begin{figure}
 \pgfplotstableread{data/allofasudden.csv}{\table}
-% %     \includegraphics[width=\textwidth]{./img/09-fig1-2.pdf}
 \begin{tikzpicture}
     \begin{axis}
       [
         axis lines*=left,
         smooth,
         height = .3\textheight,
-        width  = \textwidth,
+        width  = .95\textwidth,
         x tick label style={/pgf/number format/1000 sep=},
         scaled ticks=false,
+        yticklabel style={
+          /pgf/number format/fixed,
+          /pgf/number format/precision=8
+        },
         xlabel = {year},
+        yticklabel={\pgfmathprintnumber{\tick}\%},
         xmin = 1800,
         xmax = 2000
       ]
@@ -103,11 +107,55 @@ Despite its limitations, the Google Books $n$-gram viewer still, I think, gives 
 
 \begin{figure}
 \caption{$n$-gram of \textit{kick the bucket}\label{fig:6:2}} %%\url{https://books.google.com/ngrams/graph?content=kick+the+bucket & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Ckick%20the%20bucket%3B%2Cc0}
+\pgfplotstableread{data/kickthebucket.csv}{\table}
+\begin{tikzpicture}
+    \begin{axis}
+      [
+        axis lines*=left,
+        smooth,
+        height = .3\textheight,
+        width  = .95\textwidth,
+        x tick label style={/pgf/number format/1000 sep=},
+        scaled ticks=false,
+        yticklabel style={
+          /pgf/number format/fixed,
+          /pgf/number format/precision=8
+        },
+        xlabel = {year},
+        yticklabel={\pgfmathprintnumber{\tick}\%},
+        xmin = 1800,
+        xmax = 2000
+      ]
+    \addplot [mark=none] table [x index=0, y index=3] {\table};
+    \end{axis}
+\end{tikzpicture}
 \label{fig:6:2}
 \end{figure}
 
 \begin{figure}
 \caption{$n$-gram of \textit{in a jiffy}\label{fig:6:3}} %%\url{https://books.google.com/ngrams/graph?content=in+a+jiffy & year_start=1800 & year_end=2000 & corpus=15 & smoothing=3 & share= & direct_url=t1%3B%2Cin%20a%20jiffy%3B%2Cc0}}
+\pgfplotstableread{data/inajiffy.csv}{\table}
+\begin{tikzpicture}
+    \begin{axis}
+      [
+        axis lines*=left,
+        smooth,
+        height = .3\textheight,
+        width  = .95\textwidth,
+        x tick label style={/pgf/number format/1000 sep=},
+        scaled ticks=false,
+        yticklabel style={
+          /pgf/number format/fixed,
+          /pgf/number format/precision=8
+        },
+        xlabel = {year},
+        yticklabel={\pgfmathprintnumber{\tick}\%},
+        xmin = 1800,
+        xmax = 2000
+      ]
+    \addplot [mark=none] table [x index=0, y index=3] {\table};
+    \end{axis}
+\end{tikzpicture}
 \label{fig:6:3}
 \end{figure}
 
