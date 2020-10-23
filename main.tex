@@ -1,8 +1,9 @@
 \PassOptionsToPackage{greek,italian,french,main=english}{babel}
 \documentclass[output=book, collection, collectionchapter,multiauthors,
+                uniformtopskip=false,
                colorlinks,                citecolor=brown,
             % ,draft,
-            draftmode
+%             draftmode
 		  ]{./langscibook}                                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -16,11 +17,12 @@
 \input{localcommands.tex} 
 \addbibresource{localbibliography.bib}
 
-% \includeonly{chapters/05}
+% \includeonly{chapters/12}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%             Frontmatter                      %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\WarningFilter{scrbase}{Usage of}
 
 \begin{document}         
 \maketitle                
@@ -32,7 +34,6 @@
 
 %% sections without authors
 \include{chapters/preface}
-% \include{chapters/acknowledgments}
 
 \includepaper{chapters/introduction} 
 
@@ -42,18 +43,20 @@
 %%%             Chapters                         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \includepaper{chapters/01}  %F
-% \includepaper{chapters/02}  %F
-% \includepaper{chapters/03}  %F
-% \includepaper{chapters/04}  %F
-% \includepaper{chapters/05}  %F
-% \includepaper{chapters/06}  %F
-% \includepaper{chapters/07}  %F
+\part{Metalinguistic concepts and representations}
+\includepaper{chapters/01}
+\includepaper{chapters/02}
+\includepaper{chapters/03}
+\includepaper{chapters/04}
+\includepaper{chapters/05}
+\includepaper{chapters/06}
+\part{Fields, authors and disciplinary commitments}
+\includepaper{chapters/07}
 \includepaper{chapters/08}
-% \includepaper{chapters/09}
-% \includepaper{chapters/10}
-% \includepaper{chapters/11}
-% \includepaper{chapters/12}
+\includepaper{chapters/09}
+\includepaper{chapters/10}
+\includepaper{chapters/11}
+\includepaper{chapters/12}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%             Backmatter                       %%%
