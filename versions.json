@@ -1,7 +1,1 @@
-{"versions": [{"versiontype": "proofreading",
-		"title": "Essays in the history of linguistics",
-		"authors": [{"name": "Emilie Aussant"},{"name":" Jean-Michel Fortis"}],
-	"license": "CC-BY-4.0",
-	"publishedAt": "2020-08-28T08:04:05.000Z"}
-	]
-}
+{"versions": [{"authors": [{"name": "Emilie Aussant"}, {"name": " Jean-Michel Fortis"}], "title": "Essays in the history of linguistics", "publishedAt": "2020-08-28T08:04:05.000Z", "license": "CC-BY-4.0", "versiontype": "proofreading"}, {"title": "Essays in the history of linguistics", "versiontype": "first_edition", "license": "CC-BY-4.0", "publishedAt": "2020-12-28T07:52:03.349548", "authors": [{"name": "Emilie Aussant"}, {"name": " Jean-Michel Fortis"}]}]}
